@@ -1,0 +1,13 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Nuclei
+      uses: projectdiscovery/nuclei-action@main
+      with:
+        target: ‘https://www.225035.cc/’
+        templates: custom_template_path
