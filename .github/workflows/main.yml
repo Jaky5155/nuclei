@@ -12,7 +12,7 @@ jobs:
       - name: Nuclei - Vulnerability Scan
         uses: projectdiscovery/nuclei-action@main
         with:
-          urls: urls.txt
+          urls: http://testphp.vulnweb.com/
           flags: "-severity critical,high,medium,low -stats"
 
       - name: GitHub Workflow artifacts
