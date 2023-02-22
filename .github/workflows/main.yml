@@ -6,8 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Run Nuclei
+    - name: Nuclei - Vulnerability Scan
       uses: projectdiscovery/nuclei-action@main
       with:
-        target: "https://151.106.34.165/"
         urls: urls.txt
