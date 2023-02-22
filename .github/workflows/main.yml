@@ -9,4 +9,4 @@ jobs:
     - name: Nuclei - Vulnerability Scan
       uses: projectdiscovery/nuclei-action@main
       with:
-        urls: ./urls.txt
+        urls: ./.github/workflows/urls.txt
