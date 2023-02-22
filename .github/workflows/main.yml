@@ -11,6 +11,7 @@ jobs:
         uses: projectdiscovery/nuclei-action@main
         with:
           urls: urls.txt
+          flags: "-severity critical,high,medium,low -stats"
 
       - name: GitHub Workflow artifacts
         uses: actions/upload-artifact@v2
