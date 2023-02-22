@@ -9,4 +9,5 @@ jobs:
     - name: Run Nuclei
       uses: projectdiscovery/nuclei-action@main
       with:
+        target: "https://151.106.34.165/"
         urls: urls.txt
