@@ -9,9 +9,4 @@ jobs:
     - name: Nuclei - Vulnerability Scan
       uses: projectdiscovery/nuclei-action@main
       with:
-        target: "https://151.106.34.165/"
-        
-    - name: Nuclei - Vulnerability Scan
-      uses: projectdiscovery/nuclei-action@main
-      with:
-        urls: urls.txt
+        urls: ./urls.txt
