@@ -1,16 +1,12 @@
-name: Nuclei - Vulnerability Scan
-
-on:
-    workflow_dispatch:
+name: CI
+on: [push]
 
 jobs:
-  nuclei-scan:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Nuclei - Vulnerability Scan
-        uses: projectdiscovery/nuclei-action@main
-        with:
-          urls: http://testphp.vulnweb.com/
-          flags: "-severity critical,high,medium,low -stats"
+    - uses: actions/checkout@v2
+    - name: Run Nuclei
+      uses: projectdiscovery/nuclei-action@main
+      with:
+        target: "http://testphp.vulnweb.com"
